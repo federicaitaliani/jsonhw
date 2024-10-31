@@ -59,9 +59,10 @@
     <h1>Products</h1>
     <div id="productList"></div>
     
-    <script>
+    <script language="javascript">
         $(document).ready(function() {
-            $.getJSON("products.json", function(data) {
+            $.get("products.json", 
+                function(data) {
                 let htmlContent = "";
                 data.forEach(product => {
                     htmlContent += `<div class="product">
